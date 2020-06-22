@@ -19,7 +19,7 @@ on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 
 # -- Project information -----------------------------------------------------
 
-project = 'Reproducibility-Git'
+project = 'Reproducible Science - Git @ TACC'
 copyright = '2020, Texas Advanced Computing Center'
 author = 'Texas Advanced Computing Center'
 
