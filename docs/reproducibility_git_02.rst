@@ -9,8 +9,8 @@ document and play back each change you made, eventually arriving at your
 more recent version.
 
 
-.. image:: ./fig/play-changes.svg
-   :target: ./fig/play-changes.svg
+.. image:: ./images/play-changes.svg
+   :target: ./images/play-changes.svg
    :alt: Changes Are Saved Sequentially
 
 
@@ -20,16 +20,16 @@ resulting in different versions of that document. For example, two users can mak
 sets of changes on the same document.
 
 
-.. image:: ./fig/versions.svg
-   :target: ./fig/versions.svg
+.. image:: ./images/versions.svg
+   :target: ./images/versions.svg
    :alt: Different Versions Can be Saved
 
 
 Unless there are conflicts, you can even incorporate two sets of changes into the same base document.
 
 
-.. image:: ./fig/merge.svg
-   :target: ./fig/merge.svg
+.. image:: ./images/merge.svg
+   :target: ./images/merge.svg
    :alt: Multiple Versions Can be Merged
 
 

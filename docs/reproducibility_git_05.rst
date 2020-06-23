@@ -256,8 +256,8 @@ In the example below, we want to retrieve the state from before the most
 recent commit (\ ``HEAD~1``\ ), which is commit ``cfe5306``\ :
 
 
-.. image:: ./fig/git-checkout.svg
-   :target: ./fig/git-checkout.svg
+.. image:: ./images/git-checkout.svg
+   :target: ./images/git-checkout.svg
    :alt: Git Checkout
 
 

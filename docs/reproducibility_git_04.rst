@@ -276,8 +276,8 @@ and ``git commit`` then *actually takes* the snapshot, and
 makes a permanent record of it (as a commit).
 
 
-.. image:: ./fig/git-staging-area.svg
-   :target: ./fig/git-staging-area.svg
+.. image:: ./images/git-staging-area.svg
+   :target: ./images/git-staging-area.svg
    :alt: The Git Staging Area
 
 

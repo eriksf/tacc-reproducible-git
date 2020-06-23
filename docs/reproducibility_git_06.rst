@@ -17,16 +17,16 @@ world.  Log in to GitHub, then click on the icon in the top right corner to
 create a new repository called ``my_first_repo``\ :
 
 
-.. image:: ./fig/github-create-repo-01.png
-   :target: ./fig/github-create-repo-01.png
+.. image:: ./images/github-create-repo-01.png
+   :target: ./images/github-create-repo-01.png
    :alt: Creating a Repository on GitHub (Step 1)
 
 
 Name your repository "my_first_repo" and then click "Create Repository":
 
 
-.. image:: ./fig/github-create-repo-02.png
-   :target: ./fig/github-create-repo-02.png
+.. image:: ./images/github-create-repo-02.png
+   :target: ./images/github-create-repo-02.png
    :alt: Creating a Repository on GitHub (Step 2)
 
 
@@ -34,8 +34,8 @@ As soon as the repository is created, GitHub displays a page with a URL and some
 information on how to configure your local repository:
 
 
-.. image:: ./fig/github-create-repo-03.png
-   :target: ./fig/github-create-repo-03.png
+.. image:: ./images/github-create-repo-03.png
+   :target: ./images/github-create-repo-03.png
    :alt: Creating a Repository on GitHub (Step 3)
 
 
@@ -52,8 +52,8 @@ committed our earlier work on ``notes.txt``\ , we had a diagram of the local rep
 which looked like this:
 
 
-.. image:: ./fig/git-staging-area.svg
-   :target: ./fig/git-staging-area.svg
+.. image:: ./images/git-staging-area.svg
+   :target: ./images/git-staging-area.svg
    :alt: The Local Repository with Git Staging Area
 
 
@@ -68,8 +68,8 @@ The home page of the repository on GitHub includes the string we need to
 identify it:
 
 
-.. image:: ./fig/github-find-repo-string.png
-   :target: ./fig/github-find-repo-string.png
+.. image:: ./images/github-find-repo-string.png
+   :target: ./images/github-find-repo-string.png
    :alt: Where to Find Repository URL on GitHub
 
 

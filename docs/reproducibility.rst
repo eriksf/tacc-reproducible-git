@@ -48,8 +48,8 @@ How can we Achieve Reproducibility in Computational Science?
 
 **Version control** can be considered the "lab notebook of the digital world". Version control systems are a set of tools used to track and manage changes in digital information. A form of version control you are probably already familiar with is "Track Changes" feature in Microsoft Word. It is useful for some applications, but long-term provenance is difficult.
 
-.. image:: ./fig/sophistication.png
-   :target: ./fig/sophistication.png
+.. image:: ./images/sophistication.png
+   :target: ./images/sophistication.png
    :alt: Sophistication Levels
 
 In this workshop, we will look at the version control system **Git**. Of the several version control systems available (Git, Subversion, CVS, Mercurial), our group mostly uses Git, and we generally find that it is:

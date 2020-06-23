@@ -5,8 +5,8 @@ Collaborating with Others
 A public platform like GitHub makes it easier than ever to collaborate with others on the content of a repository. You can have as many local copies of a repository as you want, but there is only one "origin" repository - the repository hosted on GitHub. Other repositories may fall behind the origin, or have changes that are ahead of the origin. A common model for juggling multiple repositories where separate individuals are working on different features is the `GitFlow model <https://datasift.github.io/gitflow/IntroducingGitFlow.html>`_\ :
 
 
-.. image:: ./fig/GitFlowMasterBranch.png
-   :target: ./fig/GitFlowMasterBranch.png
+.. image:: ./images/GitFlowMasterBranch.png
+   :target: ./images/GitFlowMasterBranch.png
    :alt: GitFlow
 
 
