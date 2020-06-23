@@ -46,7 +46,7 @@ Setting up Git
 
 Log on to your Jetstream VM, and check which version of Git is in your ``PATH``.
 
-.. code-block::
+.. code-block:: bash
 
    $ ssh train123@123.45.67.890   # use your training account and ip address
    (enter password)
@@ -69,7 +69,7 @@ On a command line, Git commands are written as ``git verb``\ ,
 where ``verb`` is what we actually want to do. So here is how
 we set up our environment on Stampede2:
 
-.. code-block::
+.. code-block:: bash
 
    $ git config --global user.name "Joe Allen"
    $ git config --global user.email "wallen@tacc.utexas.edu"

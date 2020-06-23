@@ -1,14 +1,10 @@
-.. role:: raw-html-m2r(raw)
-   :format: html
-
-
 Tracking Changes
 ----------------
 
 We will use this repository to record notes from the version control module.
 Create a new file called ``notes.txt`` in your repo:
 
-.. code-block::
+.. code-block:: bash
 
    $ pwd
    /home/wallen/my_first_repo
@@ -18,13 +14,13 @@ Create a new file called ``notes.txt`` in your repo:
 
 Open the file with VIM and enter the following text:
 
-.. code-block::
+.. code-block:: bash
 
    $ vim notes.txt
 
 Now in VIM:
 
-.. code-block::
+.. code-block:: bash
 
    (press 'i' to enter insert mode)
 
@@ -33,7 +29,7 @@ Now in VIM:
 
    (press Esc then :wq to save and quit)
 
-.. code-block::
+.. code-block:: bash
 
    $ cat notes.txt
    Part 1: The Basics of Git
@@ -45,7 +41,7 @@ Start Tracking a New File
 If we check the status of our project again,
 Git tells us that it's noticed the new file:
 
-.. code-block::
+.. code-block:: bash
 
    $ git status
    On branch master
@@ -63,13 +59,13 @@ The "untracked files" message means that there's a file in the directory
 that Git isn't keeping track of.
 We can tell Git to track a file using ``git add``\ :
 
-.. code-block::
+.. code-block:: bash
 
    $ git add notes.txt
 
 And then check for the expected behavior:
 
-.. code-block::
+.. code-block:: bash
 
    $ git status
    On branch master
@@ -89,7 +85,7 @@ but it hasn't recorded these changes as a commit yet.
 To get it to do that,
 we need to run one more command:
 
-.. code-block::
+.. code-block:: bash
 
    $ git commit -m "Started notes for the version control module"
    [master (root-commit) 39e316e] Started notes for the version control module
@@ -106,12 +102,12 @@ Your commit may have another identifier.
 We use the ``-m`` flag (for "message")
 to record a short, descriptive, and specific comment that will help us remember later on what we did and why.
 Good commit messages start with a brief (<50 characters) statement about the
-changes made in the commit. Generally, the message should complete the sentence "If applied, this commit will" :raw-html-m2r:`<commit message here>`.
+changes made in the commit. Generally, the message should complete the sentence "If applied, this commit will" `<commit message here>`.
 If you want to go into more detail, add a blank line between the summary line and your additional notes. Use this additional space to explain why you made changes and/or what their impact will be.
 
 If we run ``git status`` now:
 
-.. code-block::
+.. code-block:: bash
 
    $ git status
    On branch master
@@ -125,7 +121,7 @@ Check the Project History
 If we want to know what we've done recently,
 we can ask Git to show us the project's history using ``git log``\ :
 
-.. code-block::
+.. code-block:: bash
 
    $ git log
    commit 39e316e4afe33957495a328750c72834551bd9f1
@@ -154,13 +150,13 @@ Making Further Changes
 
 Now suppose we add more information to the file. Edit the file with ``VIM`` to add Part 2 of the notes:
 
-.. code-block::
+.. code-block:: bash
 
    $ vim notes.txt
 
 Now in VIM:
 
-.. code-block::
+.. code-block:: bash
 
    (press 'i' to enter insert mode)
 
@@ -171,7 +167,7 @@ Now in VIM:
 
    (press Esc then :wq to save and quit)
 
-.. code-block::
+.. code-block:: bash
 
    $ cat notes.txt
    Part 1: The Basics of Git
@@ -183,7 +179,7 @@ Now in VIM:
 When we run ``git status`` now,
 it tells us that a file it already knows about has been modified:
 
-.. code-block::
+.. code-block:: bash
 
    $ git status
    On branch master
@@ -206,7 +202,7 @@ our changes before saving them. We do this using ``git diff``.
 This shows us the differences between the current state
 of the file and the most recently saved version:
 
-.. code-block::
+.. code-block:: bash
 
    $ git diff
    diff --git a/notes.txt b/notes.txt
@@ -239,7 +235,7 @@ If we break it down into pieces:
 
 After reviewing our change, it's time to commit it:
 
-.. code-block::
+.. code-block:: bash
 
    $ git add notes.txt
    $ git commit -m "Added part 2 to version control notes"
@@ -287,13 +283,13 @@ and into long-term storage.
 First,
 we'll add another line to the file:
 
-.. code-block::
+.. code-block:: bash
 
    $ vim notes.txt
 
 Now in VIM:
 
-.. code-block::
+.. code-block:: bash
 
    (press 'i' to enter insert mode)
 
@@ -304,7 +300,7 @@ Now in VIM:
 
    (press Esc then :wq to save and quit)
 
-.. code-block::
+.. code-block:: bash
 
    $ cat notes.txt
    Part 1: The Basics of Git
@@ -318,7 +314,7 @@ Now in VIM:
 
 Now check the changes:
 
-.. code-block::
+.. code-block:: bash
 
    $ git diff
    diff --git a/notes.txt b/notes.txt
@@ -339,7 +335,7 @@ we've added a few lines to the end of the file
 Now let's put that change in the staging area
 and see what ``git diff`` reports:
 
-.. code-block::
+.. code-block:: bash
 
    $ git add notes.txt
    $ git diff
@@ -351,7 +347,7 @@ and what's currently in the directory.
 However,
 if we do this:
 
-.. code-block::
+.. code-block:: bash
 
    $ git diff --staged
    diff --git a/notes.txt b/notes.txt
@@ -371,7 +367,7 @@ the last committed change
 and what's in the staging area.
 Let's save our changes:
 
-.. code-block::
+.. code-block:: bash
 
    $ git commit -m "Started adding instructions for part 3"
    [master 53baf60] Started adding instructions for part 3
@@ -379,7 +375,7 @@ Let's save our changes:
 
 Check our status:
 
-.. code-block::
+.. code-block:: bash
 
    $ git status
    On branch master
@@ -387,7 +383,7 @@ Check our status:
 
 And look at the history of what we've done so far:
 
-.. code-block::
+.. code-block:: bash
 
    $ git log
    commit 53baf60a5ddeb490f8ed0542458abb7e850048e9
@@ -413,7 +409,7 @@ Note on Directories
 
 There are a couple important facts you should know about directories in Git. First, Git does not track directories on their own, only files within them. Try it for yourself:
 
-.. code-block::
+.. code-block:: bash
 
    $ mkdir directory
    $ git status
@@ -427,7 +423,7 @@ repository.
 Second, if you create a directory in your Git repository and populate it with files,
 you can add all files in the directory at once by:
 
-.. code-block::
+.. code-block:: bash
 
    $ git add <directory-with-files>
 
@@ -436,7 +432,7 @@ Exercise
 
 Here is the next section that we will cover, add it to ``notes.txt``\ :
 
-.. code-block::
+.. code-block:: bash
 
    Part 4: Exploring history
 

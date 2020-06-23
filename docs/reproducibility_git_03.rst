@@ -4,7 +4,7 @@ Create a New Repository on the Command Line
 
 First, let's create a new folder in our ``$HOME`` directory on ``training01`` to organize our work:
 
-.. code-block::
+.. code-block:: bash
 
    $ cd ~/
    $ mkdir my_first_repo/
@@ -12,21 +12,21 @@ First, let's create a new folder in our ``$HOME`` directory on ``training01`` to
 
 Then we will use a Git command to initialize this directory as a new Git repository - or a place where Git can start to organize versions of our files.
 
-.. code-block::
+.. code-block:: bash
 
    $ git init
    Initialized empty Git repository in /home/wallen/my_first_repo/.git/
 
 If we use ``ls -a``\ , we can see that Git has created a hidden directory within ``my_first_repo`` called ``.git``\ :
 
-.. code-block::
+.. code-block:: bash
 
    $ ls -a
    ./  ../  .git/
 
 Use the ``find`` command to get a overview of the contents of the ``.git/`` directory:
 
-.. code-block::
+.. code-block:: bash
 
    $ find .git/
    .git/
@@ -59,7 +59,7 @@ If we ever delete the ``.git`` sub-directory, we will lose the project's history
 
 We can check that everything is set up correctly by asking Git to tell us the status of our project:
 
-.. code-block::
+.. code-block:: bash
 
    $ git status
    On branch master

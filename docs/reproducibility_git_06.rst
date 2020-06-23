@@ -41,7 +41,7 @@ information on how to configure your local repository:
 
 This effectively does the following on GitHub's servers:
 
-.. code-block::
+.. code-block:: bash
 
    $ mkdir my_first_repo
    $ cd my_first_repo
@@ -76,7 +76,7 @@ identify it:
 Copy that URL from the browser, go into the local ``my_first_repo`` repository, and run
 this command:
 
-.. code-block::
+.. code-block:: bash
 
    $ git remote add origin https://github.com/wjallen/my_first_repo.git
 
@@ -85,7 +85,7 @@ difference should be your username instead of ``wjallen``.
 
 We can check that the command has worked by running ``git remote -v``\ :
 
-.. code-block::
+.. code-block:: bash
 
    $ git remote -v
    origin  https://github.com/wjallen/my_first_repo.git (fetch)
@@ -97,7 +97,7 @@ something else if we wanted to, but ``origin`` is by far the most common choice.
 Once the nickname ``origin`` is set up, this command will push the changes from
 our local repository to the repository on GitHub:
 
-.. code-block::
+.. code-block:: bash
 
    $ git push origin master
    Username for 'https://github.com': wjallen
@@ -118,7 +118,7 @@ If the network you are connected to uses a proxy, there is a chance that your
 last command failed with "Could not resolve hostname" as the error message. To
 solve this issue, you need to tell Git about the proxy:
 
-.. code-block::
+.. code-block:: bash
 
    $ git config --global http.proxy http://user:password@proxy.url
    $ git config --global https.proxy http://user:password@proxy.url
@@ -126,7 +126,7 @@ solve this issue, you need to tell Git about the proxy:
 When you connect to another network that doesn't use a proxy, you will need to
 tell Git to disable the proxy using:
 
-.. code-block::
+.. code-block:: bash
 
    $ git config --global --unset http.proxy
    $ git config --global --unset https.proxy
@@ -136,7 +136,7 @@ Clone the Repository
 
 Spend a few minutes browsing the web interface for GitHub. Now, anyone can make a full copy of ``my_first_repo`` including all the commit history by performing:
 
-.. code-block::
+.. code-block:: bash
 
    $ git clone https://github.com/wjallen/my_first_repo
    Cloning into 'my_first_repo'...
