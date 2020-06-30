@@ -6,6 +6,8 @@
 Reproducible Science - Version Control
 ======================================
 
+An introduction to version control and `Git <https://git-scm.com/>`_.
+
 .. toctree::
    :maxdepth: 1
    :caption: Contents:

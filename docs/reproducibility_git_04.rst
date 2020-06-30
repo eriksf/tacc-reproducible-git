@@ -7,7 +7,7 @@ Create a new file called ``notes.txt`` in your repo:
 .. code-block:: bash
 
    $ pwd
-   /home/wallen/my_first_repo
+   /home1/03762/eriksf/my_first_repo
    $ touch notes.txt
    $ ls
    notes.txt
@@ -46,7 +46,7 @@ Git tells us that it's noticed the new file:
    $ git status
    On branch master
 
-   Initial commit
+   No commits yet
 
    Untracked files:
       (use "git add <file>..." to include in what will be committed)
@@ -70,7 +70,7 @@ And then check for the expected behavior:
    $ git status
    On branch master
 
-   Initial commit
+   No commits yet
 
    Changes to be committed:
      (use "git rm --cached <file>..." to unstage)
@@ -88,7 +88,7 @@ we need to run one more command:
 .. code-block:: bash
 
    $ git commit -m "Started notes for the version control module"
-   [master (root-commit) 39e316e] Started notes for the version control module
+   [master (root-commit) 040f18c] Started notes for the version control module
     1 file changed, 1 insertion(+)
     create mode 100644 notes.txt
 
@@ -96,7 +96,7 @@ When we run ``git commit``\ ,
 Git takes everything we have told it to save by using ``git add``
 and stores a copy permanently inside the special ``.git`` directory.
 This permanent copy is called a "commit"
-(or "revision") and its short identifier is ``39e316e``.
+(or "revision") and its short identifier is ``040f18c``.
 Your commit may have another identifier.
 
 We use the ``-m`` flag (for "message")
@@ -111,7 +111,7 @@ If we run ``git status`` now:
 
    $ git status
    On branch master
-   nothing to commit, working directory clean
+   nothing to commit, working tree clean
 
 it tells us everything is up to date.
 
@@ -124,9 +124,9 @@ we can ask Git to show us the project's history using ``git log``\ :
 .. code-block:: bash
 
    $ git log
-   commit 39e316e4afe33957495a328750c72834551bd9f1
-   Author: Joe Allen <wallen@tacc.utexas.edu>
-   Date:   Fri Jul 13 10:49:08 2018 -0500
+   commit 040f18ccbbdfdbe3081a67d30d0171d6a96806e8 (HEAD -> master)
+   Author: Erik Ferlanti <eferlanti@tacc.utexas.edu>
+   Date:   Tue Jun 30 12:48:44 2020 -0500
 
        Started notes for the version control module
 
@@ -239,11 +239,11 @@ After reviewing our change, it's time to commit it:
 
    $ git add notes.txt
    $ git commit -m "Added part 2 to version control notes"
-   [master cfe5306] Added part 2 to version control notes
+   [master 22f7faf] Added part 2 to version control notes
     1 file changed, 3 insertion(+)
    $ git status
    On branch master
-   nothing to commit, working directory clean
+   nothing to commit, working tree clean
 
 Git insists that we add files to the set we want to commit
 before actually committing anything. This allows us to commit our
@@ -370,7 +370,7 @@ Let's save our changes:
 .. code-block:: bash
 
    $ git commit -m "Started adding instructions for part 3"
-   [master 53baf60] Started adding instructions for part 3
+   [master c89ab96] Started adding instructions for part 3
     1 file changed, 3 insertion(+)
 
 Check our status:
@@ -379,28 +379,28 @@ Check our status:
 
    $ git status
    On branch master
-   nothing to commit, working directory clean
+   nothing to commit, working tree clean
 
 And look at the history of what we've done so far:
 
 .. code-block:: bash
 
    $ git log
-   commit 53baf60a5ddeb490f8ed0542458abb7e850048e9
-   Author: William Allen <wallen@tacc.utexas.edu>
-   Date:   Fri Jul 13 11:15:04 2018 -0500
+   commit c89ab9650c4e1afda675dbdb3f9dbfb3cc0b53d4 (HEAD -> master)
+   Author: Erik Ferlanti <eferlanti@tacc.utexas.edu>
+   Date:   Tue Jun 30 13:02:58 2020 -0500
 
-       Started adding instructions for part 3
+       Stared adding instructions for part 3
 
-   commit cfe53067828d2e7232503e4dfec43d9ac20e6cfb
-   Author: William Allen <wallen@tacc.utexas.edu>
-   Date:   Fri Jul 13 10:59:46 2018 -0500
+   commit 22f7fafb1d9852759acd65f62c9bb6eacd673b45
+   Author: Erik Ferlanti <eferlanti@tacc.utexas.edu>
+   Date:   Tue Jun 30 12:58:39 2020 -0500
 
        Added part 2 to version control notes
 
-   commit 39e316e4afe33957495a328750c72834551bd9f1
-   Author: William Allen <wallen@tacc.utexas.edu>
-   Date:   Fri Jul 13 10:49:08 2018 -0500
+   commit 040f18ccbbdfdbe3081a67d30d0171d6a96806e8
+   Author: Erik Ferlanti <eferlanti@tacc.utexas.edu>
+   Date:   Tue Jun 30 12:48:44 2020 -0500
 
        Started notes for the version control module
 

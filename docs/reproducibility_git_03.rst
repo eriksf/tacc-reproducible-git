@@ -2,7 +2,7 @@
 Create a New Repository on the Command Line
 -------------------------------------------
 
-First, let's create a new folder in our ``$HOME`` directory on ``training01`` to organize our work:
+First, let's create a new folder in our ``$HOME`` directory on ``stampede2`` to organize our work:
 
 .. code-block:: bash
 
@@ -15,7 +15,7 @@ Then we will use a Git command to initialize this directory as a new Git reposit
 .. code-block:: bash
 
    $ git init
-   Initialized empty Git repository in /home/wallen/my_first_repo/.git/
+   Initialized empty Git repository in /home1/03762/eriksf/my_first_repo/.git/
 
 If we use ``ls -a``\ , we can see that Git has created a hidden directory within ``my_first_repo`` called ``.git``\ :
 
@@ -64,7 +64,7 @@ We can check that everything is set up correctly by asking Git to tell us the st
    $ git status
    On branch master
 
-   Initial commit
+   No commits yet
 
    nothing to commit (create/copy files and use "git add" to track)
 

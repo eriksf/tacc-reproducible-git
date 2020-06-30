@@ -89,14 +89,14 @@ We could also use ``git show`` which shows us what changes we made at an older c
 .. code-block:: bash
 
    $ git show HEAD~2 notes.txt
-   commit cfe53067828d2e7232503e4dfec43d9ac20e6cfb
-   Author: Joe Allen <wallen@tacc.utexas.edu>
-   Date:   Fri Jul 13 10:59:46 2018 -0500
+   commit 22f7fafb1d9852759acd65f62c9bb6eacd673b45
+   Author: Erik Ferlanti <eferlanti@tacc.utexas.edu>
+   Date:   Tue Jun 30 12:58:39 2020 -0500
 
        Added part 2 to version control notes
 
    diff --git a/notes.txt b/notes.txt
-   index 0495f06..fe7c565 100644
+   index a63fd85..06a7f25 100644
    --- a/notes.txt
    +++ b/notes.txt
    @@ -1,2 +1,5 @@
@@ -104,7 +104,7 @@ We could also use ``git show`` which shows us what changes we made at an older c
     * Git is used for version control
    +
    +Part 2: Create a new repository from the command line
-   +* use git init ./ to initialize a new repository
+   +* use git init to initialize a new repository
 
 In this way,
 we can build up a chain of commits.
@@ -125,20 +125,20 @@ and "unique" really does mean unique:
 every change to any set of files on any computer
 has a unique 40-character identifier.
 Our first commit was given the ID
-``cfe53067828d2e7232503e4dfec43d9ac20e6cfb``\ ,
+``22f7fafb1d9852759acd65f62c9bb6eacd673b45``\ ,
 so let's try this:
 
 .. code-block:: bash
 
-   $ git diff cfe53067828d2e7232503e4dfec43d9ac20e6cfb notes.txt
+   $ git diff 22f7fafb1d9852759acd65f62c9bb6eacd673b45 notes.txt
    diff --git a/notes.txt b/notes.txt
-   index fe7c565..a4a265a 100644
+   index 06a7f25..1300c9b 100644
    --- a/notes.txt
    +++ b/notes.txt
    @@ -3,3 +3,9 @@ Part 1: The Basics of Git
 
     Part 2: Create a new repository from the command line
-    * use git init ./ to initialize a new repository
+    * use git init to initialize a new repository
    +
    +Part 3: Tracking changes with git
    +* this is what we are working on now
@@ -152,15 +152,15 @@ so Git lets us use just the first few characters:
 
 .. code-block:: bash
 
-   $ git diff cfe5306 notes.txt
+   $ git diff 22f7faf notes.txt
    diff --git a/notes.txt b/notes.txt
-   index fe7c565..a4a265a 100644
+   index 06a7f25..1300c9b 100644
    --- a/notes.txt
    +++ b/notes.txt
    @@ -3,3 +3,9 @@ Part 1: The Basics of Git
 
     Part 2: Create a new repository from the command line
-    * use git init ./ to initialize a new repository
+    * use git init to initialize a new repository
    +
    +Part 3: Tracking changes with git
    +* this is what we are working on now
@@ -201,6 +201,7 @@ by using ``git checkout``\ :
 .. code-block:: bash
 
    $ git checkout HEAD notes.txt
+   Updated 1 path from 7808d54
    $ cat notes.txt
    Part 1: The Basics of Git
    * Git is used for version control
@@ -223,7 +224,8 @@ we can use a commit identifier instead:
 
 .. code-block:: bash
 
-   $ git checkout cfe5306 notes.txt
+   $ git checkout 040f18c notes.txt
+   Updated 1 path from c547ab2
    $ cat notes.txt
    Part 1: The Basics of Git
    * Git is used for version control
@@ -234,6 +236,7 @@ by using ``git checkout``\ :
 .. code-block:: bash
 
    $ git checkout HEAD notes.txt
+   Updated 1 path from 7808d54
    $ cat notes.txt
    Part 1: The Basics of Git
    * Git is used for version control

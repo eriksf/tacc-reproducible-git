@@ -44,18 +44,18 @@ across different computers, facilitating collaboration among different people.
 Setting up Git
 ^^^^^^^^^^^^^^
 
-Log on to your Jetstream VM, and check which version of Git is in your ``PATH``.
+Log on to Stampede2 (or use your local machine), and check which version of Git is in your ``PATH``.
 
 .. code-block:: bash
 
-   $ ssh train123@123.45.67.890   # use your training account and ip address
+   $ ssh <username>@stampede2.tacc.utexas.edu   # use your account
    (enter password)
    (enter token)
 
    $ which git
-   /usr/bin/git
+   /opt/apps/git/2.24.1/bin/git
    $ git --version
-   git version 1.8.3.1
+   git version 2.24.1
 
 When we use Git on a new computer for the first time,
 we need to configure a few things. Below are a few examples
@@ -71,8 +71,8 @@ we set up our environment on Stampede2:
 
 .. code-block:: bash
 
-   $ git config --global user.name "Joe Allen"
-   $ git config --global user.email "wallen@tacc.utexas.edu"
+   $ git config --global user.name "Erik Ferlanti"
+   $ git config --global user.email "eferlanti@tacc.utexas.edu"
 
 Please use your own name and email address. This user name and email will be associated with your subsequent Git activity,
 which means that any changes pushed to
@@ -85,4 +85,4 @@ in the future will include this information.
 Local Versions of Git
 ^^^^^^^^^^^^^^^^^^^^^
 
-A key benefit of Git is that it is platform agnostic. You can use it equally to interact with the same files from your laptop, from a lab computer, or from a cluster. Although we will not be using Git on our laptops in this workshop, instructions to install Git locally can be found `here <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>`_.
+A key benefit of Git is that it is platform agnostic. You can use it equally to interact with the same files from your laptop, from a lab computer, or from a cluster. If needed, instructions to install Git locally can be found `here <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>`_.

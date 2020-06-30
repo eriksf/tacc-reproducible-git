@@ -5,7 +5,7 @@ Version Control
 Module Learning Objectives
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This module will be fully interactive. Participants are **strongly encouraged** to follow along on the command line. Access to a TACC Training VM and a `GitHub account <https://github.com/join>`_ are required. After completing this module, participants should be able to:
+This module will be fully interactive. Participants are **strongly encouraged** to follow along on the command line. Access to a system with git installed (Mac/Windows/Linux/TACC system) and a `GitHub account <https://github.com/join>`_ are required. After completing this module, participants should be able to:
 
 
 * Describe the importance of reproducibility in Domain Sciences
