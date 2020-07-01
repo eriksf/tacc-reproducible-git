@@ -143,7 +143,7 @@ Exercise
 ^^^^^^^^
 
 
-#. Take a moment to browse the ``.git/`` directory to see if you can find where the changes are stored
+#. Take a moment to browse the ``.git/`` directory to see if you can find where the changes are stored (Hint: ``git cat-file -p "master^{tree}"``)
 
 Making Further Changes
 ^^^^^^^^^^^^^^^^^^^^^^
