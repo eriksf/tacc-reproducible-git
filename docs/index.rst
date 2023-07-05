@@ -25,9 +25,5 @@ An introduction to version control and `Git <https://git-scm.com/>`_.
    :caption: Reproducible Science
 
    Main <https://tacc-reproducible-science.readthedocs.io/en/latest/>
-   Introduction to Using High Performance Computing <https://tacc-reproducible-intro-hpc.readthedocs.io/en/latest/>
    Git <https://tacc-reproducible-git.readthedocs.io/en/latest/>
-   Python Packaging <https://reproducible-python.readthedocs.io/en/latest/>
    Containers <https://containers-at-tacc.readthedocs.io/en/latest/>
-   TAPIS <https://tacc.github.io/summer-institute-2020-tapis/>
-   Workflow automation <https://tacc-reproducible-automation.readthedocs.io/en/latest/>
