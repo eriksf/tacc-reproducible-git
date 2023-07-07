@@ -41,7 +41,7 @@ information on how to configure your local repository:
 
 This effectively does the following on GitHub's servers:
 
-.. code-block:: bash
+.. code-block:: console
 
    $ mkdir my_first_repo
    $ cd my_first_repo
@@ -76,20 +76,22 @@ identify it:
 Copy that URL from the browser, go into the local ``my_first_repo`` repository, and run
 this command:
 
-.. code-block:: bash
+.. code-block:: console
 
-   $ git remote add origin https://github.com/wjallen/my_first_repo.git
+   $ git remote add origin git@github.com:eriksf/my_first_repo.git
 
 Make sure to use the URL for your repository rather than mine: the only
-difference should be your username instead of ``wjallen``.
+difference should be your username instead of ``eriksf``. If you want to switch to
+using SSH for authentication (recommended), see `Generating a new SSH key <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent>`_
+and `Adding a new SSH key to your GitHub account <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account>`_.
 
 We can check that the command has worked by running ``git remote -v``\ :
 
-.. code-block:: bash
+.. code-block:: console
 
    $ git remote -v
-   origin  https://github.com/wjallen/my_first_repo.git (fetch)
-   origin  https://github.com/wjallen/my_first_repo.git (push)
+   origin	git@github.com:eriksf/my_first_repo.git (fetch)
+   origin	git@github.com:eriksf/my_first_repo.git (push)
 
 The name ``origin`` is a local nickname for your remote repository. We could use
 something else if we wanted to, but ``origin`` is by far the most common choice.
@@ -97,19 +99,19 @@ something else if we wanted to, but ``origin`` is by far the most common choice.
 Once the nickname ``origin`` is set up, this command will push the changes from
 our local repository to the repository on GitHub:
 
-.. code-block:: bash
+.. code-block:: console
 
-   $ git push origin master
-   Username for 'https://github.com': wjallen
-   Password for 'https://wjallen@github.com':
-   Counting objects: 12, done.
-   Delta compression using up to 28 threads.
-   Compressing objects: 100% (7/7), done.
-   Writing objects: 100% (12/12), 1.13 KiB | 0 bytes/s, done.
-   Total 12 (delta 2), reused 0 (delta 0)
-   remote: Resolving deltas: 100% (2/2), done.
-   To https://github.com/wjallen/my_first_repo.git
-    * [new branch]      master -> master
+   $ git push -u origin main
+   Enumerating objects: 12, done.
+   Counting objects: 100% (12/12), done.
+   Delta compression using up to 56 threads
+   Compressing objects: 100% (8/8), done.
+   Writing objects: 100% (12/12), 1.09 KiB | 560.00 KiB/s, done.
+   Total 12 (delta 3), reused 0 (delta 0)
+   remote: Resolving deltas: 100% (3/3), done.
+   To github.com:eriksf/my_first_repo.git
+    * [new branch]      main -> main
+   Branch 'main' set up to track remote branch 'main' from 'origin'.
 
 Proxy
 ^^^^^
@@ -118,7 +120,7 @@ If the network you are connected to uses a proxy, there is a chance that your
 last command failed with "Could not resolve hostname" as the error message. To
 solve this issue, you need to tell Git about the proxy:
 
-.. code-block:: bash
+.. code-block:: console
 
    $ git config --global http.proxy http://user:password@proxy.url
    $ git config --global https.proxy http://user:password@proxy.url
@@ -126,7 +128,7 @@ solve this issue, you need to tell Git about the proxy:
 When you connect to another network that doesn't use a proxy, you will need to
 tell Git to disable the proxy using:
 
-.. code-block:: bash
+.. code-block:: console
 
    $ git config --global --unset http.proxy
    $ git config --global --unset https.proxy
@@ -136,12 +138,13 @@ Clone the Repository
 
 Spend a few minutes browsing the web interface for GitHub. Now, anyone can make a full copy of ``my_first_repo`` including all the commit history by performing:
 
-.. code-block:: bash
+.. code-block:: console
 
-   $ git clone https://github.com/wjallen/my_first_repo
+   $ git clone git@github.com:eriksf/my_first_repo.git
    Cloning into 'my_first_repo'...
-   remote: Counting objects: 12, done.
+   remote: Enumerating objects: 12, done.
+   remote: Counting objects: 100% (12/12), done.
    remote: Compressing objects: 100% (5/5), done.
-   remote: Total 12 (delta 2), reused 12 (delta 2), pack-reused 0
-   Unpacking objects: 100% (12/12), done.
-   Checking connectivity... done.
+   remote: Total 12 (delta 3), reused 12 (delta 3), pack-reused 0
+   Receiving objects: 100% (12/12), done.
+   Resolving deltas: 100% (3/3), done.
