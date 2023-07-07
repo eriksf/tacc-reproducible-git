@@ -44,11 +44,14 @@ across different computers, facilitating collaboration among different people.
 Setting up Git
 ^^^^^^^^^^^^^^
 
-Log on to Stampede2 (or use your local machine), and check which version of Git is in your ``PATH``.
+Use your local machine (or log on to one of the TACC systems, i.e. Frontera), and check which version of Git is in your ``PATH``.
 
-.. code-block:: bash
+.. note::
+   Below, replace ``username`` with your TACC username.
 
-   $ ssh <username>@stampede2.tacc.utexas.edu   # use your account
+.. code-block:: console
+
+   $ ssh <username>@frontera.tacc.utexas.edu   # use your account
    (enter password)
    (enter token)
 
@@ -67,9 +70,9 @@ of configurations we will set as we get started with Git:
 
 On a command line, Git commands are written as ``git verb``\ ,
 where ``verb`` is what we actually want to do. So here is how
-we set up our environment on Stampede2:
+we set up our environment on Frontera:
 
-.. code-block:: bash
+.. code-block:: console
 
    $ git config --global user.name "Erik Ferlanti"
    $ git config --global user.email "eferlanti@tacc.utexas.edu"
@@ -82,7 +85,6 @@ which means that any changes pushed to
 another Git host server
 in the future will include this information.
 
-Local Versions of Git
-^^^^^^^^^^^^^^^^^^^^^
+.. tip::
 
-A key benefit of Git is that it is platform agnostic. You can use it equally to interact with the same files from your laptop, from a lab computer, or from a cluster. If needed, instructions to install Git locally can be found `here <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>`_.
+   A key benefit of Git is that it is platform agnostic. You can use it equally to interact with the same files from your laptop, from a lab computer, or from a cluster. If needed, instructions to install Git locally can be found `here <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>`_.

@@ -10,7 +10,7 @@ We've been adding one or two lines at a time to ``notes.txt``\ , so it's easy to
 progress by looking, so let's do that using our ``HEAD``\ s.  Before we start,
 let's make a change to ``notes.txt``.
 
-.. code-block:: bash
+.. code-block:: console
 
    $ echo "Part 5 will link your local repository with github" >> notes.txt
    $ cat notes.txt
@@ -28,7 +28,7 @@ let's make a change to ``notes.txt``.
 
 Now, let's see what we get.
 
-.. code-block:: bash
+.. code-block:: console
 
    $ git diff HEAD notes.txt
    diff --git a/notes.txt b/notes.txt
@@ -45,7 +45,7 @@ Which is the same as what you would get if you leave out ``HEAD`` (try it).  The
 real benefit in all this is when you can refer to previous commits.  We do
 that by adding ``~1`` to refer to the commit one before ``HEAD``.
 
-.. code-block:: bash
+.. code-block:: console
 
    $ git diff HEAD~1 notes.txt
    diff --git a/notes.txt b/notes.txt
@@ -63,7 +63,7 @@ that by adding ``~1`` to refer to the commit one before ``HEAD``.
 If we want to see the differences between older commits we can use ``git diff``
 again, but with the notation ``HEAD~1``\ , ``HEAD~2``\ , and so on, to refer to them:
 
-.. code-block:: bash
+.. code-block:: console
 
    $ git diff HEAD~2 notes.txt
    diff --git a/notes.txt b/notes.txt
@@ -86,7 +86,7 @@ More Detailed Histories
 
 We could also use ``git show`` which shows us what changes we made at an older commit as well as the commit message, rather than the *differences* between a commit and our working directory that we see by using ``git diff``.
 
-.. code-block:: bash
+.. code-block:: console
 
    $ git show HEAD~2 notes.txt
    commit 22f7fafb1d9852759acd65f62c9bb6eacd673b45
@@ -128,7 +128,7 @@ Our first commit was given the ID
 ``22f7fafb1d9852759acd65f62c9bb6eacd673b45``\ ,
 so let's try this:
 
-.. code-block:: bash
+.. code-block:: console
 
    $ git diff 22f7fafb1d9852759acd65f62c9bb6eacd673b45 notes.txt
    diff --git a/notes.txt b/notes.txt
@@ -150,7 +150,7 @@ That's the right answer,
 but typing out random 40-character strings is annoying,
 so Git lets us use just the first few characters:
 
-.. code-block:: bash
+.. code-block:: console
 
    $ git diff 22f7faf notes.txt
    diff --git a/notes.txt b/notes.txt
@@ -175,7 +175,7 @@ We can save changes to files and see what we've changed—now how
 can we restore older versions of things?
 Let's suppose we accidentally overwrite our file:
 
-.. code-block:: bash
+.. code-block:: console
 
    $ echo "" > notes.txt
    $ cat notes.txt
@@ -183,7 +183,7 @@ Let's suppose we accidentally overwrite our file:
 ``git status`` now tells us that the file has been changed,
 but those changes haven't been staged:
 
-.. code-block:: bash
+.. code-block:: console
 
    $ git status
    On branch master
@@ -198,7 +198,7 @@ but those changes haven't been staged:
 We can put things back the way they were
 by using ``git checkout``\ :
 
-.. code-block:: bash
+.. code-block:: console
 
    $ git checkout HEAD notes.txt
    Updated 1 path from 7808d54
@@ -222,7 +222,7 @@ which is the last saved commit.
 If we want to go back even further,
 we can use a commit identifier instead:
 
-.. code-block:: bash
+.. code-block:: console
 
    $ git checkout 040f18c notes.txt
    Updated 1 path from c547ab2
@@ -233,7 +233,7 @@ we can use a commit identifier instead:
 Again, we can put things back the way they were
 by using ``git checkout``\ :
 
-.. code-block:: bash
+.. code-block:: console
 
    $ git checkout HEAD notes.txt
    Updated 1 path from 7808d54
@@ -304,7 +304,7 @@ How can you narrow down the search?
 Recall that the ``git diff`` command allow us to explore one specific file,
 e.g. ``git diff notes.txt``. We can apply a similar idea here.
 
-.. code-block:: bash
+.. code-block:: console
 
    $ git log notes.txt
 
@@ -314,7 +314,7 @@ How can you search through these files?
 Both ``git diff`` and ``git log`` are very useful and they summarize a different part of the history for you.
 Is it possible to combine both? Let's try the following:
 
-.. code-block:: bash
+.. code-block:: console
 
    $ git log --patch notes.txt
 
